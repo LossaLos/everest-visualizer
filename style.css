@@ -96,13 +96,13 @@ canvas {
 
 .marker-content {
   color: rgb(0, 0, 0);
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Righteous", sans-serif;
   text-align: center;
   white-space: nowrap;
-  margin-top: -20px;
-  margin-right: -40px; 
-  margin-left: -40px; 
+  margin-top: -30px;
+  margin-right: -50px; 
+  margin-left: -45px; 
   font-family: 'Oswald', sans-serif;
   border-radius: 1px;
   background: #EFEFEF;
@@ -111,7 +111,7 @@ canvas {
 }
 .title {
   font-family: "Righteous", sans-serif;
-  font-size: 25px;
+  font-size: 45px;
   font-weight: 200;
 }
 .popup {
@@ -126,7 +126,7 @@ canvas {
   background-color: rgba(56, 56, 56, 0.6); 
   color: white;
   padding: 4px 10px 4px 10px;
-  font-size: 12px;
+  font-size: 25px;
   overflow-y: auto; 
   transform: translateX(-100%); 
   transition: transform 0.5s ease;
