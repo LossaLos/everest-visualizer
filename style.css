@@ -64,7 +64,7 @@ canvas {
 .dg.main {
   border: none; /* Bordure rouge */
 
-  transform: scale(0.2) !important;
+  transform: scale(1) !important;
   transform-origin: top right !important;
 }
 
@@ -79,9 +79,9 @@ canvas {
 .html-marker {
   position: absolute;
   transform: translate(-50%, -50%);
-  width: 2px;
+  width: 8px;
   cursor: pointer;
-  height: 2px;
+  height: 8px;
   border: black 0.5px solid;
   background-color: #ff5a5a;
   border-radius: 50%;
@@ -120,7 +120,7 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  width: 150px;
+  width: auto;
   height: 100%;
   display: flex;
   flex-direction: column;
