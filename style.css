@@ -98,7 +98,7 @@ canvas {
 
 .marker-content {
   color: rgb(0, 0, 0);
-  font-size: 14px;
+  font-size: 18px;
   font-family: "Righteous", sans-serif;
   text-align: center;
   white-space: nowrap;
@@ -113,7 +113,7 @@ canvas {
 }
 .title {
   font-family: "Righteous", sans-serif;
-  font-size: 7px;
+  font-size: 20px;
   font-weight: 200;
 }
 .popup {
@@ -161,8 +161,8 @@ canvas {
 }
 
 .close-button {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   border: none;
   cursor: pointer;
