@@ -30,6 +30,9 @@ var gltfLoader = new THREE.GLTFLoader();
 gltfLoader.setDRACOLoader(dracoLoader);
 
 var model, ground, ground2;
+
+document.getElementById('loading-screen').style.display = 'block';
+
 gltfLoader.load('assets/everest2.glb', function(gltf) {
     model = gltf.scene;
 
@@ -57,6 +60,8 @@ gltfLoader.load('assets/everest2.glb', function(gltf) {
     });
 
     model.position.set(0, 0, 0);
+    document.getElementById('loading-screen').style.display = 'none';
+
 }, undefined, function(error) {
     console.error(error);
 });
