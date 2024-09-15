@@ -228,9 +228,10 @@ canvas {
   height: 44.8px;
   animation: spinner-y0fdc1 2.8s infinite ease;
   transform-style: preserve-3d;
-  margin: auto;
-  margin-top: 50%;
-  margin-bottom: 50%;
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+
 }
 
 .spinner > div {
