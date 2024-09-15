@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Everest Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>  
+    <div id="popup-basecamp" class="popup">
+        <div id="popup-content">
+            <div class="popup-header">
+                <p class="title">Base Camp</p>
+                <button class="close-button" onclick="hidePopup('popup-basecamp')">
+                    <span class="icon">&times;</span>
+                </button>
+            </div>
+            <p class="description">The South Base Camp is located at an elevation of 5,364 meters (17,598 feet) and can be accessed from Nepal. It is comparatively more popular than the North Base Camp. Due to its popularity, South Base Camp might be crowded during the peak climbing season.</p>
+            <p class="description">Altogether, there are four camps between the South Base Camp and the summit of Everest, with a distance of 20.5 km. After spending about 4 to 5 days in South Base Camp and acclimatizing to the altitude, you will ascend to Camp 1.</p>
+            <img class="basecamp1" src="assets/basecamp1.webp" alt="Base Camp Image">
+        </div>
+    </div>
+    
+    
+    <div id="popup-camp1" class="popup">
+        <div id="popup-content">
+            <div class="popup-header">
+                <p class="title">Camp I</p>
+                <button  class="close-button" onclick="hidePopup('popup-camp1')">
+                    <span class="icon">&times;</span>
+                </button>
+            </div>
+            <p class="description">The Camp 1 on Mount Everest stands at an impressive height of 6,065 meters (19,900 feet). Camp 1 lies just above the Khumbu Icefall, one of the many challenges that many climbers frequently face on Everest. So, there are always dangers of deep crevasses and shifting ice towers lurking, ready to wrap you in it. Climbers find this particular part of the climb really perilous, always chances of getting lost in an icefall maze.</p>
+            <img class="camp1" src="assets/camp1.PNG" alt="Camp 1">
+        </div>
+    </div>
+    
+    <div id="popup-camp2" class="popup">
+        <div id="popup-content">
+            <div class="popup-header">
+                <p class="title">Camp II</p>
+                <button  class="close-button" onclick="hidePopup('popup-camp2')">
+                    <span class="icon">&times;</span>
+                </button>
+            </div>
+            <p class="description">Situated at 6,400 meters (21,000 feet), Camp 2 on Mount Everest is a secure path on the way to the summit of Everest. However, having said safe, one can always face unseen challenges such as harsh weather conditions, hypothermia, hypoxia, altitude sickness, etc. In contrast, this part of Everest often serves as a resting phase, where you can rest and acclimatize to the increasing altitude.</p>
+            <img class="camp1" src="assets/camp2.PNG" alt="Camp 2">
+
+        </div>
+    </div>
+    
+    <div id="popup-camp3" class="popup">
+        <div id="popup-content">
+            <div class="popup-header">
+                <p class="title">Camp III</p>
+                <button  class="close-button" onclick="hidePopup('popup-camp3')">
+                    <span class="icon">&times;</span>
+                </button>
+            </div>
+            <p class="description">An additional 762 meters from Camp 2 will take you to Camp 3 (7,162 meters/13,500 feet). Moreover, Camp 3 is located on the Lhotse face, a challenging steep inclination. Reaching Camp 3 can be daunting due to the difficulty of navigating the icy slopes of the Lhotse Wall. For that reason, you need to be physically and mentally prepared for this part of the climb.</p>
+            <img class="camp1" src="assets/camp3.PNG" alt="Camp 3">
+        </div>
+    </div>
+    
+    <div id="popup-camp4" class="popup">
+        <div id="popup-content">
+            <div class="popup-header">
+                <p class="title">Camp IV</p>
+                <button  class="close-button" onclick="hidePopup('popup-camp4')">
+                    <span class="icon">&times;</span>
+                </button>
+            </div>
+            <p class="description">The Camp 4 on Mount Everest is the final Camp before reaching the summit. Camp 4 stands tall at 7,925 meters (26,000 feet); above this point lies the most challenging and treacherous “Death Zone”. This Camp is a preparatory camp before attempting the summit. The oxygen level and weather conditions on this section of Everest are dangerously difficult. Hence, climbers should spend as little time as possible and attempt to reach the summit.</p>
+            <img class="camp1" src="assets/camp4.PNG" alt="Base Camp Image">
+        </div>
+    </div>
+    
+    <div id="popup-summit" class="popup">
+        <div id="popup-content">
+        <div class="popup-header">
+            <p class="title">Summit</p>
+            <button  class="close-button" onclick="hidePopup('popup-summit')">
+                <span class="icon">&times;</span>
+            </button>
+            </div>
+
+            <p class="description">After passing through the perilous “Death Zone” at Camp 4, climbers finally approach the summit of Mount Everest. At an astonishing 8,848 meters. From this highest point on Earth, climbers are rewarded with breathtaking views of the Himalayas and the surrounding landscape.</p>
+            <p class="description">However, the summit is not without its challenges. At such a high altitude, oxygen levels are dangerously low, and weather conditions can change unexpectedly. Despite the harsh environment, standing on the summit of Everest is a moment of triumph for those who have worked tirelessly to reach the top.</p>
+            <img class="summit" src="assets/summit2.PNG" alt="Summit">
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

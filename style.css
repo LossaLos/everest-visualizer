@@ -1,0 +1,217 @@
+
+body { 
+  margin: 0; 
+  overflow: hidden;
+}
+canvas {
+    display: block; 
+}
+
+/* Fond et bordure de dat.GUI */
+.dg.main {
+  background-color: rgba(0, 0, 0, 0.3) !important; /* Fond semi-transparent sombre */
+  color: #ffffff !important; /* Texte blanc */
+  font-family: "Righteous", sans-serif  !important; /* Police moderne */
+  border: none !important;
+  height: 200px;
+}
+
+/* Personnalisation des contrôles et sliders */
+.dg.main .cr {
+  font-size: 12px !important; /* Taille du texte */
+  background-color: rgba(217, 12, 12, 0);
+  height: 25px !important; /* Hauteur des contrôles */
+  line-height: 25px !important;
+  border: none !important;
+  
+}
+
+/* Personnalisation des sliders */
+.dg.main .close-button {
+  display: none;
+  background-color: transparent; /* Fond transparent */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Changer le curseur au survol */
+  align-items: center;
+  bottom: 1px;
+  justify-content: center;
+}
+
+/* Style de l'icône de fermeture (X) */
+.dg.main .close-button::before {
+  content: '×';  /* Icône de fermeture */
+  font-size: 14px; /* Taille de l'icône */
+  color: #ff5a5a;  /* Couleur rouge */
+  transition: color 0.3s ease;
+}
+
+/* Effet au survol */
+.dg.main .close-button:hover::before {
+  color: white; 
+}
+
+/* Personnalisation des boutons et des champs d'entrée */
+.dg.main .c input[type="text"],
+.dg.main .c input[type="number"] {
+  background-color: rgba(255, 255, 255, 0.2) !important; /* Fond semi-transparent */
+  border: none; /* Bordure rouge */
+  color: #ffffff !important; /* Texte blanc */
+  font-family: "Righteous", sans-serif !important; /* Police moderne */
+}
+
+
+/* Réduire la taille globale du GUI */
+.dg.main {
+  border: none; /* Bordure rouge */
+
+  transform: scale(0.2) !important;
+  transform-origin: top right !important;
+}
+
+/* Boutons et labels */
+.dg.main .c label {
+  border: none; /* Bordure rouge */
+
+  color: #ffffff !important; /* Couleur du texte pour les labels */
+}
+
+
+.html-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  cursor: pointer;
+  height: 2px;
+  border: black 0.5px solid;
+  background-color: #ff5a5a;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.html-marker:hover {
+  background-color: #630070;
+  border-color: #ffffff; 
+}
+
+.hidden {
+  display: none;
+}
+
+.marker-content {
+  color: rgb(0, 0, 0);
+  font-size: 4px;
+  font-family: "Righteous", sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  margin-top: -10px;
+  margin-right: -19px; 
+  margin-left: -19px; 
+  font-family: 'Oswald', sans-serif;
+  border-radius: 1px;
+  background: #EFEFEF;
+  border: 0.7px solid rgba(255, 90, 90, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 90, 90, 0.4);
+}
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 7px;
+  font-weight: 200;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(56, 56, 56, 0.6); 
+  color: white;
+  padding: 4px 10px 4px 10px;
+  font-size: 12px; 
+  overflow-y: auto; 
+  transform: translateX(-100%); 
+  transition: transform 0.5s ease;
+}
+
+.popup-content {
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 5px;
+  line-height: 1.4; 
+  margin-bottom: 5px;
+  text-align: justify;
+  font-family: "Sarabun", sans-serif;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+}
+
+.title {
+  font-size: 9px;
+  font-weight: bold;
+  color: #ff5a5a;
+  margin: 0;
+}
+
+.close-button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.close-button .icon {
+  color: #ff5a5a; 
+  font-size: 16px;  
+  transition: color 0.3s ease;
+}
+
+.close-button:hover .icon {
+  color: white; 
+}
+
+.basecamp1 {
+  align-self: center;  
+  display: flex;
+  margin: auto;
+  align-items: end;
+  width: 80%;
+  border-radius: 5px; 
+  margin-bottom: 1px;
+  margin-top: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.camp1 {
+  align-self: center;  
+  display: flex;
+  margin: auto;
+  align-items: end;
+  width: 80%;
+  border-radius: 5px; 
+  margin-bottom: 1px;
+  margin-top: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.summit {
+  align-self: center;  
+  display: flex;
+  margin: auto;
+  align-items: end;
+  width: 70%;
+  border-radius: 5px; 
+  margin-bottom: 1px;
+  margin-top: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
