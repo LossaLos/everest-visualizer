@@ -100,9 +100,9 @@ canvas {
   font-family: "Righteous", sans-serif;
   text-align: center;
   white-space: nowrap;
-  margin-top: -35px;
-  margin-right: -55px; 
-  margin-left: -50px; 
+  margin-top: -40px;
+  margin-right: -65px; 
+  margin-left: -60px; 
   font-family: 'Oswald', sans-serif;
   border-radius: 1px;
   background: #EFEFEF;
@@ -152,15 +152,15 @@ canvas {
 }
 
 .title {
-  font-size: 9px;
+  font-size: 40px;
   font-weight: bold;
   color: #ff5a5a;
   margin: 0;
 }
 
 .close-button {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -170,7 +170,7 @@ canvas {
 
 .close-button .icon {
   color: #ff5a5a; 
-  font-size: 16px;  
+  font-size: 64px;  
   transition: color 0.3s ease;
 }
 
