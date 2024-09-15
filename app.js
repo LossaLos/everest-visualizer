@@ -47,7 +47,6 @@ gltfLoader.load('assets/everest2.glb', function(gltf) {
             }));
             ground.rotation.x = Math.PI;
             applyGradient(ground);
-
             scene.add(ground);
 
             ground2 = ground.clone();
@@ -58,18 +57,15 @@ gltfLoader.load('assets/everest2.glb', function(gltf) {
             scene.add(ground2);
         }
     });
-
     model.position.set(0, 0, 0);
     document.getElementById('loading-screen').style.display = 'none';
-
 }, undefined, function(error) {
     console.error(error);
 });
-
 var c1 = 0.8;
 var c2 = 0.4;
-
-function applyGradient(mesh) {
+function applyGradient(mesh) 
+{
     var geometry = mesh.geometry;
     var colors = [];
 
@@ -77,24 +73,25 @@ function applyGradient(mesh) {
     var minHeight = Infinity;
     var maxHeight = -Infinity;
 
-    for (let i = 0; i < position.count; i++) {
+    for (let i = 0; i < position.count; i++) 
+    {
         let y = position.getY(i);
-        if (y > maxHeight) maxHeight = y;
-        if (y < minHeight) minHeight = y;
+        if (y > maxHeight) 
+            maxHeight = y;
+        if (y < minHeight) 
+            minHeight = y;
     }
 
-    for (let i = 0; i < position.count; i++) {
+    for (let i = 0; i < position.count; i++) 
+    {
         let y = position.getY(i);
         let normalizedY = (y - minHeight) / (maxHeight - minHeight);
 
         let color = new THREE.Color().setHSL(c1 - c2 * normalizedY, 1, 0.5);
         colors.push(color.r, color.g, color.b);
     }
-
     geometry.setAttribute('color', new THREE.BufferAttribute(new Float32Array(colors), 3));
 }
-
-
 
 var gui = new dat.GUI();
 var settings = {
@@ -131,9 +128,6 @@ gui.add(settings, 'rotationSpeed', 0, 0.05).name('Rotation speed').onChange(func
 });
 
 
-
-
-
 var positions = {
     basecamp: { x: 80, y: 8, z: -4 },
     camp1: { x: 70, y: 10, z: -10 },
@@ -152,7 +146,8 @@ var markers = [
     createHTMLMarker(positions.summit, 'Summit - 8,848m', 'popup-summit')
 ];
 
-function createHTMLMarker(position, label, popupId) {
+function createHTMLMarker(position, label, popupId) 
+{
     var markerDiv = document.createElement('div');
     markerDiv.className = 'html-marker';
     markerDiv.innerHTML = `<div class="marker-content hidden">${label}</div>`; 
@@ -170,7 +165,8 @@ markers.forEach(function(markerObj) {
 });
 
 
-function onMouseMove(event) {
+function onMouseMove(event) 
+{
     var mouseX = event.clientX;
     var mouseY = event.clientY;
 
@@ -178,45 +174,45 @@ function onMouseMove(event) {
         var markerContent = markerObj.markerDiv.querySelector('.marker-content');
         var rect = markerObj.markerDiv.getBoundingClientRect();
         
-        if (mouseX > rect.left && mouseX < rect.right && mouseY > rect.top && mouseY < rect.bottom) {
+        if (mouseX > rect.left && mouseX < rect.right && mouseY > rect.top && mouseY < rect.bottom) 
+        {
             markerContent.classList.remove('hidden'); 
-        } else {
+        } 
+        else 
+        {
             markerContent.classList.add('hidden');  
         }
     });
 }
 
-function updateHTMLMarkers() {
+function updateHTMLMarkers() 
+{
     markers.forEach(function(markerObj) 
     {
         var vector = markerObj.position.clone();
-        
         vector.applyAxisAngle(new THREE.Vector3(0, 1, 0), scene.rotation.y);
-
         vector.project(camera);
-
         var x = (vector.x * 0.5 + 0.5) * window.innerWidth;
         var y = (1 - vector.y * 0.5 - 0.5) * window.innerHeight;
-
         markerObj.markerDiv.style.left = `${x}px`;
         markerObj.markerDiv.style.top = `${y}px`;
-
-        if (vector.z < -1 || vector.z > 1 || !settings.showMarkers) {
+        if (vector.z < -1 || vector.z > 1 || !settings.showMarkers) 
+        {
             markerObj.markerDiv.style.display = 'none';
-        } else {
+        } 
+        else 
+        {
             markerObj.markerDiv.style.display = 'block';
         }
     });
 }
 
-
 window.addEventListener('mousemove', onMouseMove, false);
 
-function centerCameraOnMarker(markerPosition) {
+function centerCameraOnMarker(markerPosition) 
+{
     var adjustedPosition = markerPosition.clone();
-
     adjustedPosition.applyAxisAngle(new THREE.Vector3(0, 1, 0), scene.rotation.y);
-
     gsap.to(camera.position, {
         duration: 1.5,
         x: adjustedPosition.x + 20,
@@ -230,7 +226,8 @@ function centerCameraOnMarker(markerPosition) {
 }
 
 
-function showPopup(popupId) {
+function showPopup(popupId) 
+{
     var allPopups = document.querySelectorAll('.popup');
     allPopups.forEach(function(popup) {
         popup.style.transform = 'translateX(-100%)'; 
@@ -240,11 +237,11 @@ function showPopup(popupId) {
     popup.style.transform = 'translateX(0)';
 }
 
-function hidePopup(popupId) {
+function hidePopup(popupId) 
+{
     var popup = document.getElementById(popupId);
     popup.style.transform = 'translateX(-100%)'; 
 }
-
 
 window.onload = function() {
     var popup = document.getElementById('popup');
@@ -255,11 +252,11 @@ var gr1 = 0;
 var gr2 = 0;
 var rotationSpeed = 0;
 
-function animate() {
+function animate() 
+{
     requestAnimationFrame(animate);
     scene.rotation.y += rotationSpeed;
     updateHTMLMarkers();
-
     controls.update();
     renderer.render(scene, camera);
 }
@@ -273,4 +270,3 @@ window.addEventListener('resize', function() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 });
-
