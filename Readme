@@ -1,0 +1,33 @@
+Everest Exploration Website 🌍
+        This project is a personal website inspired by the adventure documentary of Inoxtag on Mount Everest. As a student developer,
+        I aimed to recreate the spirit of the climb with a 3D interactive visualization of the Everest region. 
+        This project serves as a way to explore the camps and summit of Mount Everest using 3D models and interactive markers.
+
+Features
+        🏔 3D Model of Everest: A detailed, interactive 3D model of Mount Everest.
+
+        🏕 Interactive Markers: Clickable markers representing Base Camp, Camp 1, Camp 2, Camp 3, Camp 4, and the Summit, each with detailed descriptions.
+
+        💬 Info Popups: Hover and click to display information about each camp and the summit.
+
+        🌐 Custom UI: A user interface to control elements like wireframe visibility, gradient adjustments, and more.
+
+        🖥 Best viewed on Desktop: This project is designed primarily for desktop and isn't optimized for mobile devices yet.
+
+
+Technologies Used
+        Three.js: 3D rendering and animation for the Everest model.
+        GLTFLoader: Used to load the 3D models of Everest.
+        GSAP: For smooth animations and transitions.
+        dat.GUI: For real-time controls over visual elements like colors and wireframes.
+        HTML/CSS: Structure and styling of the website.
+        JavaScript: For dynamic interactions and 3D rendering.
+        Blender: For 3d obj.
+Known Issues
+        📱 Mobile Compatibility: The website is not fully optimized for mobile devices yet. It's recommended to view the website on a desktop for the best experience.
+        ⏳ Loading Time: Depending on your internet connection, the 3D model might take a few seconds to load.
+Credits
+        Inoxtag: For the inspiration behind this project with his Everest documentary.
+        Three.js: For making 3D development on the web accessible.
+Contributing
+        Feel free to fork this repository and make improvements or suggestions. If you encounter any issues, open a new issue or submit a pull request with your fixes or enhancements!
