@@ -26,18 +26,16 @@ canvas {
   
 }
 
-/* Personnalisation des sliders */
 .dg.main .close-button {
   display: none;
-  background-color: transparent; /* Fond transparent */
-  border: none; /* Pas de bordure */
-  cursor: pointer; /* Changer le curseur au survol */
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer;
   align-items: center;
   bottom: 1px;
   justify-content: center;
 }
 
-/* Style de l'icône de fermeture (X) */
 .dg.main .close-button::before {
   content: '×';  /* Icône de fermeture */
   font-size: 14px; /* Taille de l'icône */
@@ -102,9 +100,9 @@ canvas {
   font-family: "Righteous", sans-serif;
   text-align: center;
   white-space: nowrap;
-  margin-top: -10px;
-  margin-right: -19px; 
-  margin-left: -19px; 
+  margin-top: -20px;
+  margin-right: -40px; 
+  margin-left: -40px; 
   font-family: 'Oswald', sans-serif;
   border-radius: 1px;
   background: #EFEFEF;
@@ -113,7 +111,7 @@ canvas {
 }
 .title {
   font-family: "Righteous", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 200;
 }
 .popup {
